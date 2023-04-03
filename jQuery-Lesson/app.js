@@ -76,17 +76,50 @@
 
 //「マウスクリック」イベントの設定
 
+// $(function(){
+//   $('.box1').on('click', function(){
+//     $('.box1').addClass('box1-ext');　　//クリックすると黒枠が表示
+//   });
+//   $('.box1').mouseout(function(){
+//     $('.box1').removeClass('box1-ext');　　//マウスアウトすると黒枠が消える
+//   });
+// });
+
+
+//クリックした正方形のみslideUPして消える設定
+
+// $(function(){
+//   $('.bg1').on('click', function(){
+//     $('.bg1').slideUp();
+//   });
+
+//   $('.bg2').on('click', function(){
+//     $('.bg2').slideUp();
+//   });
+
+//   $('.bg3').on('click', function(){
+//     $('.bg3').slideUp();
+//   });
+
+//   $('.bg4').on('click', function(){
+//     $('.bg4').slideUp();
+//   });
+// });
+
+
+//上記内容でthis(クリックされた要素)を使用する方法
+
+// $(function(){
+//   $('.box1').on('click', function(){
+//     $(this).slideUp();
+//   });
+// });
+
+
+//上記内容でchildren(HTML要素直下のすべての子要素を取得する)を使用する方法
+
 $(function(){
-  $('.box1').on('click', function(){
-    $('.box1').addClass('box1-ext');　　//クリックすると黒枠が表示
-  });
-  $('.box1').mouseout(function(){
-    $('.box1').removeClass('box1-ext');　　//マウスアウトすると黒枠が消える
+  $('button').on('click', function(){
+    $('ul').children().css('color', 'red');　　//クリックボタンを押すとli要素内の文字列が黒から赤になる
   });
 });
-
-
-
-
-
-
